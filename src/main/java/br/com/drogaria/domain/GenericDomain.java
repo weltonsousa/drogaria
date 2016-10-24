@@ -6,23 +6,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-	//suprimir as mensagem de alerta. 
-	@SuppressWarnings("serial")
-	//notação que não corresponde a uma tabela, mas a filha gera tabela.
-	@MappedSuperclass
 
+@SuppressWarnings("serial")
+@MappedSuperclass
 public class GenericDomain implements Serializable {
-	//gerador de chave primária.
 	@Id
-	//gerador de valores
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long codigo;
+	private Long codigo;
 	
-	public long getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
 	
-	public void setCodigo(long codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 }
