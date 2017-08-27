@@ -63,6 +63,11 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.1</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.omnifaces/omnifaces -->
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+			<artifactId>omnifaces</artifactId>
+			<version>1.14</version>
+		</dependency>
 	</dependencies>
 </project>

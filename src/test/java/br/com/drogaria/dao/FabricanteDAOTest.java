@@ -12,7 +12,7 @@ public class FabricanteDAOTest {
 	@Ignore
 	public void salvar() {
 		Fabricante fabricante = new Fabricante();
-		fabricante.setDescricao("Aché");
+		fabricante.setDescricao("Ache");
 
 		FabricanteDAO fabricanteDAO = new FabricanteDAO();
 		fabricanteDAO.salvar(fabricante);
@@ -32,6 +32,7 @@ public class FabricanteDAOTest {
 	}
 	
 	@Test
+	@Ignore
 	public void buscar(){
 		Long codigo = 3L;
 		
@@ -44,5 +45,18 @@ public class FabricanteDAOTest {
 			System.out.println("Registro encontrado:");
 			System.out.println(fabricante.getCodigo() + " - " + fabricante.getDescricao());
 		}
+	}
+		
+	@Test
+	public void merge() {
+		Fabricante fabricante = new Fabricante();
+		fabricante.setDescricao("Fabricante A");
+		FabricanteDAO fabricanteDAO = new FabricanteDAO();
+		fabricanteDAO.merge(fabricante);
+		
+		/*FabricanteDAO fabricanteDAO = new FabricanteDAO();
+		Fabricante fabricante = fabricanteDAO.buscar(5L);
+		fabricante.setDescricao("Fabricante B");
+		fabricanteDAO.merge(fabricante);*/
 	}
 }
